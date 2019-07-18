@@ -56,7 +56,6 @@ class AndroidPermissionService {
       return false;
     }
 
-//    return ActivityCompat.shouldShowRequestPermissionRationale(activity, permission);
-    return false;
+    return ActivityCompat.shouldShowRequestPermissionRationale(activity, permission);
   }
 }
