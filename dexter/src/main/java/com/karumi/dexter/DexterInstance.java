@@ -228,19 +228,19 @@ final class DexterInstance {
 
     List<PermissionRequest> shouldShowRequestRationalePermissions = new LinkedList<>();
 
-    for (String permission : permissions) {
-      if (androidPermissionService.shouldShowRequestPermissionRationale(activity, permission)) {
-        shouldShowRequestRationalePermissions.add(new PermissionRequest(permission));
-      }
-    }
+//    for (String permission : permissions) {
+//      if (androidPermissionService.shouldShowRequestPermissionRationale(activity, permission)) {
+//        shouldShowRequestRationalePermissions.add(new PermissionRequest(permission));
+//      }
+//    }
 
-    if (shouldShowRequestRationalePermissions.isEmpty()) {
+//    if (shouldShowRequestRationalePermissions.isEmpty()) {
       requestPermissionsToSystem(permissions);
-    } else if (!rationaleAccepted.get()) {
-      PermissionRationaleToken permissionToken = new PermissionRationaleToken(this);
-      listener.onPermissionRationaleShouldBeShown(shouldShowRequestRationalePermissions,
-          permissionToken);
-    }
+//    } else if (!rationaleAccepted.get()) {
+//      PermissionRationaleToken permissionToken = new PermissionRationaleToken(this);
+//      listener.onPermissionRationaleShouldBeShown(shouldShowRequestRationalePermissions,
+//          permissionToken);
+//    }
   }
 
   private void updatePermissionsAsGranted(Collection<String> permissions) {
